@@ -5,6 +5,29 @@
     margin: 2px;
 } */
 
+/* keyframes for animation */
+@keyframes appear{
+ 0% { 
+    opacity:0.2; 
+    transform: translateY(10px) scale(1);
+    }
+100% {
+    opacity:1; 
+    transform: translateY(0) scale(1);
+ }
+}
+
+@keyframes appearX{
+ 0% { 
+    opacity:0.2; 
+    transform: translateX(15px) scale(1);
+    }
+100% {
+    opacity:1; 
+    transform: translateX(0) scale(1);
+ }
+}
+
 body {
     background-color: antiquewhite;
     background-size: cover;
@@ -33,6 +56,32 @@ body {
     font-size: x-large;
     font-weight: 700;
     text-decoration: none;
+    /* transform: translateY(10px) scale(.995); */
+    /* animation: appear .45s cubic-bezier(.2, .5, .6, .6) forwards ; */
+    animation-name: appear;
+    animation-duration: .45s;
+    animation-timing-function: linear;
+    animation-direction: forwards;
+    animation-delay: 10ms;
+
+    /* transition when hovered */
+    /* transition-property: text-decoration;
+    transition-duration: 100ms;
+    transition-timing-function: ease;
+    transition-delay: 20ms; */
+}
+
+.navbar a::after{
+    content: "";
+    display:flex;
+    height: 5%;
+    background-color: antiquewhite;
+    transition: width 200ms;
+    width : 0%;
+}
+
+.navbar a:hover::after{
+    width: 100%;
 }
 
 .navbar-container {
@@ -99,33 +148,48 @@ body {
     height: (1/3)vh;
     font-size: larger;
     font-family :'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 700;
+}
+
+.body-container > .education-column > .school-container > #junior > .school-logo {
+    padding-right: 1vw;
 }
 
 .body-container > .education-column > .school-container > #junior > .school-logo > img {
     height: 90%;
-    padding: 0vw 1vh;
+    padding: 1vw 1vh;
+}
+
+.body-container > .education-column > .school-container > #senior > .school-logo {
+    padding-right: 1vw;
 }
 
 .body-container > .education-column > .school-container > #senior > .school-logo > img {
     height: 90%;
-    padding: 0vw 1vh;
+    padding: 1vw 1vh;
+}
+
+.body-container > .education-column > .school-container > #uni > .school-logo {
+    padding-right: 1vw;
 }
 
 .body-container > .education-column > .school-container > #uni > .school-logo > img {
     height: 90%;
-    padding: 0vw 1vh;
+    padding: 1vw 1vh;
 }
 
 /* footer */
 .footer {
     position: relative;
-    background-color: rgba(0,0,0,0.7);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 700;
+    background-color: rgba(0,0,0,0.5);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: antiquewhite;
     width: 100%;
     height: 10%;
-    color: antiquewhite;
     /* padding-left: 20px;
     padding-right: 20px; */
 }
@@ -133,8 +197,22 @@ body {
 .footer #residence {
     position: relative;
     padding-left: 20px;
+    
+    /* animation for upward motion */
+    animation-name: appear;
+    animation-duration: .45s;
+    animation-timing-function: linear;
+    animation-direction: forwards;
+    animation-delay: 10ms;
 }
 
 .footer #copyright {
     padding-right: 20px;
+
+    /* animation for upward motion */
+    animation-name: appear;
+    animation-duration: .45s;
+    animation-timing-function: linear;
+    animation-direction: forwards;
+    animation-delay: 10ms;
 }
