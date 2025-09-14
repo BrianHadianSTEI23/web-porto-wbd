@@ -1,6 +1,29 @@
 
 /* main semantics */
 
+/* keyframes for animation */
+@keyframes appear{
+ 0% { 
+    opacity:0.2; 
+    transform: translateY(10px) scale(1);
+    }
+100% {
+    opacity:1; 
+    transform: translateY(0) scale(1);
+ }
+}
+
+@keyframes appearX{
+ 0% { 
+    opacity:0.2; 
+    transform: translateX(15px) scale(1);
+    }
+100% {
+    opacity:1; 
+    transform: translateX(0) scale(1);
+ }
+}
+
 body {
     background-color: antiquewhite;
     background-size: cover;
@@ -72,58 +95,58 @@ body {
 
 /* main container */
 .main-container {
-    color: black;
-    display: flex;
-    /* grid-template-columns: repeat(3, auto); 3 rows, height auto */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 rows, height auto */
+    justify-content: center;
     height: 80%;
     width: 100%;
-    justify-content: center;
-    /* padding: 1vw 1vh; */
-    /* overflow: hidden; */
 }
 
-.main-container > #interest {
+.main-container .interest {
+    display: block;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: auto;
     height: 100%;
-    width: 33.333333333%;
 }
 
-.main-container > #interest > .interest-teaser {
-    height: 45%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* padding: 5%; */
-    /* padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 5%; */
-}
-
-.main-container > #interest > .interest-teaser > video {
-    display: flex;
-    width :100%;
-    height: auto;
+.main-container .interest video { /* .interest-teaser */
+    width:fit-content;
+    height: 100%;
+    display: flex;  
+    position: absolute;
+    object-fit: cover;
+    z-index: 0;
     justify-content: center;
     align-items: center;
 }
 
-.main-container > #interest > .interest-title {
-    display: flex;
+.main-container .interest .interest-title {
     height: 7%;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
     font-size:60;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    padding: 1vw 1vh;
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 20%;
 } 
 
-.main-container > #interest > .interest-hook {
-    height: 45%;
+.main-container .interest .interest-hook {
+    z-index: 1;
+    position: absolute;
+    width: auto;
+    font-size:60;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: block;
+    justify-content: center;
+    top: 20%;
 }
 
-.main-container > #interest > .interest-hook > .interest-hook-quote {
+.main-container > .interest > .interest-hook > .interest-hook-quote {
     display: flex;
-    height: 50%;
     font-size: x-large;
     justify-content: center;
     align-items: center;
@@ -131,16 +154,14 @@ body {
     text-align: center;
 }
 
-.main-container > #interest > .interest-hook > .interest-hook-person {
+.main-container > .interest > .interest-hook > .interest-hook-person {
     display: flex;
-    height: 50%;
-    font-size: larger;
+    font-size: large;
     justify-content: center;
     align-items: center;
     font-family :Tahoma;
 }
 
-/* footer */
 /* footer */
 .footer {
     position: relative;
