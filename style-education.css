@@ -28,6 +28,24 @@
  }
 }
 
+@keyframes bounce{
+ 0% { 
+    transform: scale(0.8);
+    }
+ 25% { 
+    transform: scale(0.9);
+    }
+ 50% { 
+    transform: scale(1);
+    }
+ 75% { 
+    transform: scale(0.9);
+    }
+100% {
+    transform: scale(0.8);
+ }
+}
+
 body {
     background-color: antiquewhite;
     background-size: cover;
@@ -186,6 +204,9 @@ body {
 .body-container > .education-column > .school-container > #junior > .school-logo > img {
     height: 90%;
     padding: 1.3vw 1.3vh;
+
+    /* bouncing animation */
+    animation: bounce 6500ms linear infinite;
 }
 
 .body-container > .education-column > .school-container > #senior > .school-logo {
@@ -195,6 +216,8 @@ body {
 .body-container > .education-column > .school-container > #senior > .school-logo > img {
     height: 90%;
     padding: 1.3vw 1.3vh;
+    /* bouncing animation */
+    animation: bounce 6500ms linear infinite;
 }
 
 .body-container > .education-column > .school-container > #uni > .school-logo {
@@ -204,6 +227,8 @@ body {
 .body-container > .education-column > .school-container > #uni > .school-logo > img {
     height: 90%;
     padding: 1.3vw 1.3vh;
+    /* bouncing animation */
+    animation: bounce 6500ms linear infinite;
 }
 
 /* footer */
