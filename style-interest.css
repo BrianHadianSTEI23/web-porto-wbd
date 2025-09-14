@@ -108,18 +108,24 @@ body {
     justify-content: center;
     align-items: center;
     width: auto;
+    transform: filter 50ms linear;
     height: 100%;
 }
 
 .main-container .interest video { /* .interest-teaser */
-    width:fit-content;
+    width:auto;
     height: 100%;
     display: flex;  
-    position: absolute;
-    object-fit: cover;
-    z-index: 0;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    object-fit:cover;
+    z-index: 0;
+    filter: brightness(30%);
+}
+
+.main-container .interest:hover video {
+    filter: brightness(80%);
 }
 
 .main-container .interest .interest-title {
@@ -132,6 +138,7 @@ body {
     display: flex;
     justify-content: center;
     bottom: 20%;
+    color: antiquewhite;
 } 
 
 .main-container .interest .interest-hook {
@@ -143,11 +150,29 @@ body {
     display: block;
     justify-content: center;
     top: 20%;
+    padding: 10%;
+    opacity: 0;
+    transition: color 20ms linear, opacity 100ms linear;
+}
+
+.main-container .interest:hover .interest-hook{
+    content: "";
+    display: block;
+    position: absolute;
+    width: auto;
+    background-color: antiquewhite;
+    opacity: 1;
+    transition: background-color 100ms linear;
+}
+
+.main-container .interest:hover .interest-hook:hover::after {
+    background-color: antiquewhite;
 }
 
 .main-container > .interest > .interest-hook > .interest-hook-quote {
     display: flex;
     font-size: x-large;
+    font-style: italic;
     justify-content: center;
     align-items: center;
     font-family:Georgia, 'Times New Roman', Times, serif;
@@ -159,6 +184,7 @@ body {
     font-size: large;
     justify-content: center;
     align-items: center;
+    font-weight: 700;
     font-family :Tahoma;
 }
 
