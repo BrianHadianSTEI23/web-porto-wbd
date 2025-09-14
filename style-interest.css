@@ -1,0 +1,141 @@
+
+/* main semantics */
+
+body {
+    background-color: antiquewhite;
+    background-size: cover;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
+/* body::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0,0,0, 0.35);   
+    z-index: -1;
+} */
+
+.navbar {
+    /* background-color: rgba(0,0,0,0.8); */
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+
+.navbar a {
+    /* color: antiquewhite ; */
+    color: antiquewhite;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: x-large;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.navbar-container {
+    width: 100%;
+    height: 10%;
+}
+
+/* main container */
+.main-container {
+    color: black;
+    display: flex;
+    /* grid-template-columns: repeat(3, auto); 3 rows, height auto */
+    height: 80%;
+    width: 100%;
+    justify-content: center;
+    /* padding: 1vw 1vh; */
+    /* overflow: hidden; */
+}
+
+.main-container > #interest {
+    height: 100%;
+    width: 33.333333333%;
+}
+
+.main-container > #interest > .interest-teaser {
+    height: 45%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 5%; */
+    /* padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 5%; */
+}
+
+.main-container > #interest > .interest-teaser > video {
+    display: flex;
+    width :100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container > #interest > .interest-title {
+    display: flex;
+    height: 7%;
+    justify-content: center;
+    align-items: center;
+    font-size:60;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 1vw 1vh;
+} 
+
+.main-container > #interest > .interest-hook {
+    height: 45%;
+}
+
+.main-container > #interest > .interest-hook > .interest-hook-quote {
+    display: flex;
+    height: 50%;
+    font-size: x-large;
+    justify-content: center;
+    align-items: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.main-container > #interest > .interest-hook > .interest-hook-person {
+    display: flex;
+    height: 50%;
+    font-size: larger;
+    justify-content: center;
+    align-items: center;
+    font-family :Tahoma;
+}
+
+/* footer */
+.footer {
+    position: relative;
+    /* background-color: rgba(0,0,0,0.7); */
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    /* color: antiquewhite; */
+    color: antiquewhite;
+    /* padding-left: 20px;
+    padding-right: 20px; */
+}
+
+.footer #residence {
+    position: relative;
+    padding-left: 20px;
+}
+
+.footer #copyright {
+    padding-right: 20px;
+}
