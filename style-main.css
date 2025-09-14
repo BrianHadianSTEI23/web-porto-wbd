@@ -125,11 +125,17 @@ body {
 }
 
 .main #name {
+    /* styling */
     padding:1vw;
     font-size:xx-large;
     background-color: rgba(0,0,0,0.8);
-    color: white;
-
+    color: antiquewhite;
+    padding: 1.5vw;
+    border-right: 0.7vw solid antiquewhite;
+    border-radius: 0.7rem 0em 0em 0.7rem;
+    
+    
+    /* animation for x axis transition */
     animation-name: appearX;
     animation-duration: .45s;
     animation-timing-function: linear;
@@ -158,12 +164,14 @@ body {
 
 .main .container #caption {
     background-color: rgba(0,0,0,0.8);
-    color: white;
-    padding: 1vw;
+    color: antiquewhite;
+    padding: 1.5vw;
     text-align: end;
     display: flex;
     width: 45%;
     justify-content: end;
+    border-radius: 0.7rem 0em 0em 0.7rem;
+    border-right: 0.7vw solid antiquewhite;    
     /* flex : 1; */
 
     /* animation for upward */
